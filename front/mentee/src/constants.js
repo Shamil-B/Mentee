@@ -3,7 +3,7 @@ const globalIp = "http://192.168.135.214:5000";
 // const localIp = "http://localhost:5000";
 const localIp = "https://mentee-final-backend-e5gh9xl23-shamil-b.vercel.app";
 const baseApi = localIp;
-const baseFrontApi = "http://localhost:3000" ;
+const baseFrontApi = localIp;
 const localLinks = [
   "Home",
   "Pricing",
