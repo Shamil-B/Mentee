@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {localIp} from "../constants";
 
 const httpService = axios.create({
-    baseURL: 'http://localhost:5000',
+    baseURL: localIp,
     headers: {
         'Content-Type': 'application/json',
     },
