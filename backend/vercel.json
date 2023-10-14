@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/index.js"
+        }
+    ],
+    
+    "env": {
+      "APP_ID": "1639415",
+      "KEY": "20d590a2a5e4500caac1",
+      "SECRET": "42ecf3e2bf8a165ddd94",
+      "CLUSTER": "ap2"
+    }
+}
