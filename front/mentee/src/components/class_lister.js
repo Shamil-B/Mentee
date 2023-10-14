@@ -14,14 +14,14 @@ export function ClassLister(props){
                 {props.lectures.map((lecture) => {
                     return (
                         <LectureCard
-                            image={lecture.thumbnail}
-                            title={lecture.name}
-                            description={lecture.description}
-                            price={lecture.price}
-                            date={lecture.schedule.substring(0, 10)}
+                            image={lecture && lecture.thumbnail}
+                            title={lecture && lecture.name}
+                            description={lecture && lecture.description}
+                            price={lecture && lecture.price}
+                            date={lecture && lecture.schedule.substring(0, 10)}
                             duration={"2 hours"}
-                            time={lecture.schedule.substring(11, 19)}
-                            id={lecture._id}
+                            time={lecture && lecture.schedule.substring(11, 19)}
+                            id={lecture && lecture._id}
                             isMyCourse={props.isMyCourse}
                         />);
                 })
