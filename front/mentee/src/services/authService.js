@@ -64,7 +64,7 @@ export async function login({email, password}) {
 }
 
 export function logout() {
-    localStorage.removeItem(tokenKey);
+    sessionStorage.removeItem(tokenKey);
 }
 
 export function getCurrentUser() {
@@ -79,7 +79,7 @@ export function getCurrentUser() {
 
 export function getJwt() {
     try{
-        return localStorage.getItem(tokenKey);
+        return sessionStorage.getItem(tokenKey);
     }
     catch(ex){
         console.log("Error in getJwt", ex);
