@@ -23,7 +23,7 @@ export default function LectureDetailPage() {
 
   const _makePayment = async () => {
           const userInfo = await getMe();
-          const paymentDetail = {classId: lectureId,amount:lectureDetail.price,email:userInfo.email,first_name:userInfo.name.split(" ")[0],last_name:userInfo.name.split(" ")[1],phone_number:"0948671562",returnUrl:`${localIp}/success`};
+          const paymentDetail = {classId: lectureId,amount:lectureDetail.price,email:userInfo.email,first_name:userInfo.name.split(" ")[0],last_name:userInfo.name.split(" ")[1],phone_number:"0948671562",returnUrl:`${baseFrontApi}/success`};
           try {
               setIsLoading(true);
               setIsSuccess(false);
