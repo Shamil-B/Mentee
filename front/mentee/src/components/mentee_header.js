@@ -30,7 +30,9 @@ export default function MenteeHeader(props) {
            })
        }
        else{
-              setProfileInfo(JSON.parse(user));
+              if(user){
+                  setProfileInfo(JSON.parse(user));
+              }
        }
 }, []);
 
