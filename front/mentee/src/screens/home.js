@@ -64,6 +64,12 @@ export default function Home() {
   const [testimonials, setTestimonials] = useState([]);
   const [socialLogos, setSocialLogos] = useState([]);
 
+  const imageFields = [{
+      image_src:"images/interact_2.png",
+  },{
+      image_src:"images/experience_2.png",
+  }]
+
   useEffect(() => {
     fetch(localIp)
       .then((res) => res.json())
@@ -128,7 +134,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <img className="w-96" alt="" src={card.image_src}></img>
+            <img className="w-96" alt="" src={imageFields[featureCards.indexOf(card)].image_src}></img>
           </div>
         );
       })}
@@ -157,9 +163,9 @@ export default function Home() {
 
       <div
         className="get-started-section bg-white flex flex-col-reverse 
-      items-center shadow-2xl  px-4 pb-4 w-8/12 rounded mt-20 md:flex-row md:justify-evenly mx-4 lg:w-9/12 lg:mx-auto"
+      items-center shadow-2xl  px-10 py-10 w-6/12 rounded mt-20 md:flex-row md:justify-evenly mx-4 lg:w-9/12 lg:mx-auto"
       >
-        <div className="flex flex-col gap-8 justify-center items-center">
+        <div className="flex flex-col gap-8 justify-center items-center px-10 py-15">
           <h1 className="md:text-3xl text-2xl  font-semibold text-gray-700">
             Get started with Mentee today
           </h1>
@@ -175,11 +181,11 @@ export default function Home() {
             <PrimaryButton text={"Sign up now"} />
           </Link>
         </div>
-        <img
-          alt=""
-          src="images/graph_1.png"
-          className="w-96 relative bottom-10"
-        ></img>
+        {/*<img*/}
+        {/*  alt=""*/}
+        {/*  src="images/online_learning_2.png"*/}
+        {/*  className="w-96 relative bottom-10"*/}
+        {/*></img>*/}
       </div>
       <Footer />
     </div>
