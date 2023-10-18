@@ -1,5 +1,5 @@
 import {Link, useNavigate} from "react-router-dom";
-import {faDashboard, faPlus} from "@fortawesome/free-solid-svg-icons";
+import {faDashboard, faHome, faPlus} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Profile from "./profile";
 import {PrimaryButton} from "./buttons";
@@ -81,6 +81,12 @@ export default function MenteeHeader(props) {
         <FontAwesomeIcon icon={faDashboard}></FontAwesomeIcon>
         <div className="ml-2">My Dashboard</div>
     </div>
+        <div onClick={()=>{
+            history("/lectures");
+        }} className="create-lecture-btn bg-green-600 text-white px-4 py-2 rounded-2xl flex items-center gap-2 hover:bg-green-700 cursor-pointer transition delay-50 font-semibold">
+            <FontAwesomeIcon icon={faHome}></FontAwesomeIcon>
+            <div className="ml-2">All Courses</div>
+        </div>
         {
             isLogged ? (
                     <div className="profile flex gap-5 items-center absolute right-10 cursor-pointer ">
